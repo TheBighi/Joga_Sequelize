@@ -36,3 +36,10 @@ Demo data
 ```
 npx sequelize-cli seed:generate --name demo-authors
 ```
+
+VAGA TAHTIS 
+
+```
+npx sequelize-cli db:seed:undo:all
+npx sequelize-cli db:seed:all
+```
