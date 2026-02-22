@@ -1,15 +1,8 @@
 "use strict";
 
-/** @type {import('sequelize-cli').Migration} */
 module.exports = {
   up(queryInterface, Sequelize) {
     return Promise.all([
-      queryInterface.changeColumn("Articles", "id", {
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
-        primaryKey: true,
-        allowNull: false,
-      }),
       queryInterface.changeColumn("Articles", "name", {
         type: Sequelize.STRING,
         allowNull: false,
@@ -27,7 +20,6 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false,
       }),
-
       queryInterface.changeColumn("Articles", "published", {
         type: Sequelize.DATE,
         allowNull: false,
